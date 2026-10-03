@@ -30,6 +30,9 @@
     <!-- Whether to find optimal display refresh rate when using udfps -->
     <bool name="config_udfpsOptimalRefreshRate">false</bool>
 
+    <!-- Whether to disable Smart Pixels on UDFPS -->
+    <bool name="config_disableSmartPixelsOnUDFPS">true</bool>
+
     <!-- Update battery info every second when device is charging -->
     <bool name="config_alternateFastchargeInfoUpdate">true</bool>
 </resources>
