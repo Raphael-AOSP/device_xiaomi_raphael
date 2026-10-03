@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/custom_raphael.mk
+    $(LOCAL_DIR)/uwu_raphael.mk

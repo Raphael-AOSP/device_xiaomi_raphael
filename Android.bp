@@ -12,6 +12,31 @@ soong_namespace {
     ],
 }
 
+uwu_kernel {
+    name: "kernel",
+    kernel_dir: "kernel/xiaomi/raphael",
+    kernel_arch: "arm64",
+    image_name: "Image.gz-dtb",
+    clang_version: "clang-r563880c",
+
+    config: {
+        defconfig: "raphael_defconfig",
+    },
+
+    dtb: {
+        enabled: true,
+        target: "dtbs",
+        image_name: "dtb.img",
+    },
+
+    dtbo: {
+        enabled: true,
+        target: "dtbs",
+        image_name: "dtbo.img",
+        page_size: 4096,
+    },
+}
+
 install_symlink {
     name: "firmware_wlan_mac.bin_symlink",
     vendor: true,

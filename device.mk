@@ -7,6 +7,10 @@
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/raphael/raphael-vendor.mk)
 
+# Build the kernel through the uwu_kernel Soong module.
+PRODUCT_PACKAGES += \
+    kernel
+
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 

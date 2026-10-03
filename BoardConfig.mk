@@ -70,6 +70,9 @@ ODM_MANIFEST_SKUS += nfc
 ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/configs/hidl/manifest_nfc.xml
 
 # Kernel
+BOARD_USES_SOONG_KERNEL := true
+SOONG_KERNEL_MODULE := //device/xiaomi/raphael:kernel
+TARGET_KERNEL_VERSION := 4.14
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE += console=null
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
@@ -81,14 +84,7 @@ BOARD_KERNEL_CMDLINE += loop.max_part=16
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += kpti=off
 BOARD_KERNEL_CMDLINE += swiotlb=1
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_RAMDISK_USE_LZ4 := true
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r563880c
-TARGET_KERNEL_SOURCE := kernel/xiaomi/raphael
-TARGET_KERNEL_CONFIG := raphael_defconfig
 
 
 # Livedisplay
